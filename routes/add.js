@@ -2,25 +2,25 @@ var express = require('express');
 var router = express.Router();
 const fs = require('fs')
 
-router.get('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
     var data = fs.readFileSync('list.json');
     var dataJSON = data.toString();
     var list = JSON.parse(dataJSON)
     var newElement = {
-        id: '4',
-        title: 'title4',
-        organization: '',
-        categories: '',
-        price: '',
+        id: list.length+1,
+        title: req.body.name,
+        organization: req.body.organization,
+        categories: req.body.categories,
+        price: req.body.price,
         likes: '',
-        language: '',
-        recommended: '',
-        link: 'https://www.google.com/',
+        language: req.body.language,
+        recommended: req.body.recommended,
+        link: req.body.url,
     }
     list.push(newElement)
     var JSONList = JSON.stringify(list)
     fs.writeFileSync('list.json', JSONList)
-    res.send('Adding to list');
+    res.send('Added to list');
 });
 
 module.exports = router;

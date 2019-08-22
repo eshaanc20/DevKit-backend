@@ -5,7 +5,7 @@ const fs = require('fs')
 router.get('/', function(req, res, next) {
     var data = fs.readFileSync('list.json');
     var JSONdata = data.toString();
-    res.send(data);
+    res.send(JSONdata);
 });
 
 module.exports = router;
