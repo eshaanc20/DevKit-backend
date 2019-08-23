@@ -11,6 +11,7 @@ var APIListRouter = require('./routes/APIList');
 var requestRouter = require('./routes/request');
 var viewRequestsRouter = require('./routes/viewRequests');
 var addRouter = require('./routes/add');
+var deleteRouter = require('./routes/delete');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use('/APIList', APIListRouter);
 app.use('/request', requestRouter);
 app.use('/viewRequests', viewRequestsRouter);
 app.use('/add', addRouter);
+app.use('/delete', deleteRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
