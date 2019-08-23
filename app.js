@@ -8,6 +8,8 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var APIListRouter = require('./routes/APIList');
+var requestRouter = require('./routes/request');
+var viewRequestsRouter = require('./routes/viewRequests');
 var addRouter = require('./routes/add');
 
 var app = express();
@@ -26,6 +28,8 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/APIList', APIListRouter);
+app.use('/request', requestRouter);
+app.use('/viewRequests', viewRequestsRouter);
 app.use('/add', addRouter);
 
 // catch 404 and forward to error handler
