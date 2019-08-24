@@ -23,7 +23,7 @@ router.post('/', function(req, res, next) {
         likes: 0,
         language: add.language,
         recommended: add.recommended,
-        link: add.url,
+        url: add.url,
     }
     list.push(newElement)
     requests.splice(requestIndex,1)

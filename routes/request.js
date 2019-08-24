@@ -15,7 +15,7 @@ router.post('/', function(req, res, next) {
         likes: 0,
         language: req.body.language,
         recommended: req.body.recommended,
-        link: req.body.url,
+        url: req.body.url,
     }
     requests.push(newElement)
     var JSONList = JSON.stringify(requests)
