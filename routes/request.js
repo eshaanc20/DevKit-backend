@@ -12,7 +12,7 @@ router.post('/', function(req, res, next) {
         organization: req.body.organization,
         categories: req.body.categories,
         price: req.body.price,
-        likes: '',
+        likes: 0,
         language: req.body.language,
         recommended: req.body.recommended,
         link: req.body.url,
