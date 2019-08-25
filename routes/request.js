@@ -10,10 +10,11 @@ router.post('/', function(req, res, next) {
         id: requests.length+1,
         title: req.body.name,
         organization: req.body.organization,
-        categories: req.body.categories,
+        type: req.body.type,
+        category: req.body.category,
         price: req.body.price,
         likes: 0,
-        language: req.body.language,
+        languages: req.body.languages,
         recommended: req.body.recommended,
         url: req.body.url,
     }

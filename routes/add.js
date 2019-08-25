@@ -18,10 +18,11 @@ router.post('/', function(req, res, next) {
         id: list.length+1,
         title: add.title,
         organization: add.organization,
-        categories: add.categories,
+        type: add.type,
+        category: add.category,
         price: add.prices,
         likes: 0,
-        language: add.language,
+        languages: add.languages,
         recommended: add.recommended,
         url: add.url,
     }
