@@ -23,7 +23,7 @@ router.post('/', function(req, res, next) {
         price: add.prices,
         likes: 0,
         languages: add.languages,
-        recommended: add.recommended,
+        color: add.color,
         url: add.url,
     }
     list.push(newElement)
