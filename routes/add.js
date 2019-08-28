@@ -32,12 +32,12 @@ router.post('/', function(req, res, next) {
         color: add.color,
         url: add.url,
     }
-    list.push(newElement)
-    requests.splice(requestIndex,1)
-    var JSONRequestList = JSON.stringify(requests)
-    var JSONList = JSON.stringify(list)
-    fs.writeFileSync('list.json', JSONList)
-    fs.writeFileSync('request.json', JSONRequestList)
+    list.push(newElement);
+    requests.splice(requestIndex,1);
+    var JSONRequestList = JSON.stringify(requests);
+    var JSONList = JSON.stringify(list);
+    fs.writeFileSync('list.json', JSONList);
+    fs.writeFileSync('request.json', JSONRequestList);
     res.send('Added API to list');
 });
 

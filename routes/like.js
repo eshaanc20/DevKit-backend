@@ -13,6 +13,8 @@ router.route('/', function (req, res, next) {
   })[0]
   element.id = element.id + 1;
   list.splice(elementIndex,1,element);
+  var JSONList = JSON.stringify(list);
+  fs.writeFileSync('list.json', JSONList);
   res.send('Liked');
 })
 
