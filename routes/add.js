@@ -14,8 +14,14 @@ router.post('/', function(req, res, next) {
         request.id == req.body.id? requestIndex = index: null;
         return request.id == req.body.id
     })[0]
+    var lastElement = 0;
+    if (list.length == 0) {
+        lastElement = 0
+    } else {
+        lastElement = list[list.length-1].id
+    }
     var newElement = {
-        id: list.length+1,
+        id: lastElement+1,
         title: add.title,
         organization: add.organization,
         type: add.type,

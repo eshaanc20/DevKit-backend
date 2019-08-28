@@ -18,8 +18,8 @@ var colors = [
 router.post('/', function(req, res, next) {
     var data = fs.readFileSync('request.json');
     var dataJSON = data.toString();
-    var requests = JSON.parse(dataJSON)
-    var randomNumber = Math.floor(Math.random()*10)
+    var requests = JSON.parse(dataJSON);
+    var randomNumber = Math.floor(Math.random()*10);
     var newElement = {
         id: requests.length+1,
         title: req.body.name,
