@@ -26,7 +26,7 @@ router.post('/', function(req, res, next) {
         organization: add.organization,
         type: add.type,
         category: add.category,
-        price: add.prices,
+        price: add.price,
         likes: 0,
         languages: add.languages,
         color: add.color,
