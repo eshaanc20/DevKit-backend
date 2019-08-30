@@ -3,16 +3,15 @@ var router = express.Router();
 const fs = require('fs');
 
 var colors = [
-    'green',
-    'blue',
-    'red',
-    'orange',
-    'purple',
-    'lightgray',
-    'teal',
-    'black',
-    'pink',
-    'darkgreen'
+    '#74D5DE',
+    '#94E69A',
+    '#FEF085',
+    '#FCC04F',
+    '#74A1DE',
+    '#AB8DFF',
+    '#F2B4FA',
+    '#FF809D',
+    '#D4D9DB'
 ]
 
 router.post('/', function(req, res, next) {

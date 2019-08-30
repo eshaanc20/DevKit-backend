@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 const fs = require('fs');
 
-router.route('/', function (req, res, next) {
+router.post('/', function (req, res, next) {
+  console.log(req)
   var data = fs.readFileSync('list.json');
   var dataJSON = data.toString();
   var list = JSON.parse(dataJSON);
@@ -11,7 +12,7 @@ router.route('/', function (req, res, next) {
     element.id == req.body.id? elementIndex = index: null;
     return element.id == req.body.id;
   })[0]
-  element.id = element.id + 1;
+  element.likes =  req.body.likes;
   list.splice(elementIndex,1,element);
   var JSONList = JSON.stringify(list);
   fs.writeFileSync('list.json', JSONList);
