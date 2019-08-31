@@ -31,6 +31,7 @@ router.post('/', function(req, res, next) {
         languages: add.languages,
         color: add.color,
         url: add.url,
+        image:add.image
     }
     list.push(newElement);
     requests.splice(requestIndex,1);
