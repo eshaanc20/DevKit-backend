@@ -3,7 +3,6 @@ var router = express.Router();
 const fs = require('fs');
 
 router.post('/', function (req, res, next) {
-  console.log(req)
   var data = fs.readFileSync('list.json');
   var dataJSON = data.toString();
   var list = JSON.parse(dataJSON);
