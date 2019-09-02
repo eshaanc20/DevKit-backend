@@ -58,6 +58,6 @@ router.post('/', function(req, res, next) {
     requests.push(newElement)
     var JSONList = JSON.stringify(requests)
     fs.writeFileSync('request.json', JSONList)
-    res.send('Request sent to add API to list');
+    res.send('Request sent to add software tool to list');
 });
 module.exports = router;

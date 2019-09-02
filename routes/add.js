@@ -3,7 +3,7 @@ var router = express.Router();
 const fs = require('fs');
 
 router.post('/', function(req, res, next) {
-    var data = fs.readFileSync('list.json');
+    var data = fs.readFileSync('softwareTools.json');
     var dataJSON = data.toString();
     var list = JSON.parse(dataJSON);
     var requestFileData = fs.readFileSync('request.json');
@@ -37,9 +37,9 @@ router.post('/', function(req, res, next) {
     requests.splice(requestIndex,1);
     var JSONRequestList = JSON.stringify(requests);
     var JSONList = JSON.stringify(list);
-    fs.writeFileSync('list.json', JSONList);
+    fs.writeFileSync('softwareTools.json', JSONList);
     fs.writeFileSync('request.json', JSONRequestList);
-    res.send('Added API to list');
+    res.send('Added software tool to list');
 });
 
 module.exports = router;

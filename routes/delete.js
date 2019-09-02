@@ -3,18 +3,33 @@ var router = express.Router();
 const fs = require('fs');
 
 router.post('/', function(req, res, next) {
-    var requestFileData = fs.readFileSync('request.json');
-    var requestFile = requestFileData.toString();
-    var requests = JSON.parse(requestFile)
-    var requestIndex = 0;
-    var element = requests.filter((request,index) => {
-        request.id == req.body.id? requestIndex = index: null;
-        return request.id == req.body.id
-    })[0]
-    requests.splice(requestIndex,1)
-    var JSONRequestList = JSON.stringify(requests)
-    fs.writeFileSync('request.json', JSONRequestList)
-    res.send('API not added to list');
+    if (req.body.value) {
+        var requestFileData = fs.readFileSync('request.json');
+        var requestFile = requestFileData.toString();
+        var requests = JSON.parse(requestFile)
+        var requestIndex = 0;
+        var element = requests.filter((request,index) => {
+            request.id == req.body.id? requestIndex = index: null;
+            return request.id == req.body.id
+        })[0]
+        requests.splice(requestIndex,1)
+        var JSONRequestList = JSON.stringify(requests)
+        fs.writeFileSync('request.json', JSONRequestList)
+        res.send('Software tool was not added to list');
+    } else {
+        var fileData = fs.readFileSync('softwareTools.json');
+        var file = fileData.toString();
+        var softwareTools = JSON.parse(file)
+        var index = 0;
+        var element = softwareTools.filter((softwareTool,index) => {
+            softwareTool.id == req.body.id? index = index: null;
+            return softwareTool.id == req.body.id
+        })[0]
+        softwareTools.splice(index,1)
+        var JSONList = JSON.stringify(softwareTools)
+        fs.writeFileSync('softwareTools.json', JSONList)
+        res.send('Software tool was removed from the list');
+    }
 });
 
 module.exports = router;

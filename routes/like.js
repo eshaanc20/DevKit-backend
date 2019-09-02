@@ -3,7 +3,7 @@ var router = express.Router();
 const fs = require('fs');
 
 router.post('/', function (req, res, next) {
-  var data = fs.readFileSync('list.json');
+  var data = fs.readFileSync('softwareTools.json');
   var dataJSON = data.toString();
   var list = JSON.parse(dataJSON);
   var elementIndex = 0;
@@ -14,7 +14,7 @@ router.post('/', function (req, res, next) {
   element.likes =  req.body.likes;
   list.splice(elementIndex,1,element);
   var JSONList = JSON.stringify(list);
-  fs.writeFileSync('list.json', JSONList);
+  fs.writeFileSync('softwareTools.json', JSONList);
   res.send('Liked');
 })
 
