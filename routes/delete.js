@@ -20,12 +20,12 @@ router.post('/', function(req, res, next) {
         var fileData = fs.readFileSync('softwareTools.json');
         var file = fileData.toString();
         var softwareTools = JSON.parse(file)
-        var index = 0;
+        var listIndex = 0;
         var element = softwareTools.filter((softwareTool,index) => {
-            softwareTool.id == req.body.id? index = index: null;
+            softwareTool.id == req.body.id? listIndex = index: null;
             return softwareTool.id == req.body.id
         })[0]
-        softwareTools.splice(index,1)
+        softwareTools.splice(listIndex,1)
         var JSONList = JSON.stringify(softwareTools)
         fs.writeFileSync('softwareTools.json', JSONList)
         res.send('Software tool was removed from the list');
