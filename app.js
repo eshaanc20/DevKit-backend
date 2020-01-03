@@ -14,6 +14,11 @@ var addRouter = require('./routes/add');
 var deleteRouter = require('./routes/delete');
 var likeRouter = require('./routes/like.js');
 
+const mongoDB = require('mongodb');
+const MongoClient = mongodb.MongoClient;
+
+const databaseName = 'Devkit-database';
+
 var app = express();
 
 // view engine setup
