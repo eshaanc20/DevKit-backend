@@ -14,10 +14,7 @@ var addRouter = require('./routes/add');
 var deleteRouter = require('./routes/delete');
 var likeRouter = require('./routes/like.js');
 
-const mongoDB = require('mongodb');
-const MongoClient = mongodb.MongoClient;
-
-const databaseName = 'Devkit-database';
+const connectionUrl = 'mongodb://127.0.0.1:27017';
 
 var app = express();
 

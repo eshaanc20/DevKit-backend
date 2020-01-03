@@ -13,6 +13,7 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mongodb": "^3.4.1",
+    "mongoose": "^5.8.4",
     "morgan": "~1.9.1"
   }
 }

@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const fs = require('fs');
 
 router.post('/', function(req, res, next) {
     var data = fs.readFileSync('softwareTools.json');
