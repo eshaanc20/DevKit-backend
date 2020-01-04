@@ -47,9 +47,9 @@ const parameters = {
     }
 }
 
-const SoftwareToolRequest = mongoose.model("SoftwareToolRequests", parameters)
+const SoftwareToolRequest = mongoose.model("softwaretools-requests", parameters)
 
-const SoftwareTool = mongoose.model("SoftwareTools", parameters)
+const SoftwareTool = mongoose.model("softwaretools", parameters)
 
 module.exports = {
     SoftwareToolRequest: SoftwareToolRequest,
