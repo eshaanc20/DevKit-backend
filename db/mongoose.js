@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://new-user:l1QCeNVZdBio1rSU@cluster0-y8hdl.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://new-user:gN5HQ3tA1sqBCFRE@cluster0-y8hdl.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
 })
 
 const parameters = {
