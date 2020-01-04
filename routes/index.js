@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Devkit-backend' });
+  res.render('index', { title: 'DevKit-backend' });
 });
 
 module.exports = router;
