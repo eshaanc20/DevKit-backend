@@ -13,6 +13,7 @@ var viewRequestsRouter = require('./routes/viewRequests');
 var addRouter = require('./routes/add');
 var deleteRouter = require('./routes/delete');
 var likeRouter = require('./routes/like.js');
+require('./db/mongoose.js');
 
 var app = express();
 
@@ -51,5 +52,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(3001, () => console.log("Server running"));
 
 module.exports = app;
