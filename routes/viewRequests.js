@@ -1,11 +1,15 @@
 var express = require('express');
 var router = express.Router();
 const fs = require('fs');
+const {SoftwareToolRequest} = require('../db/mongoose.js');
 
 router.get('/', function(req, res, next) {
-  var data = fs.readFileSync('request.json');
-  var JSONdata = data.toString();
-  res.send(JSONdata);
+  SoftwareToolRequest.find({}).then((SoftwareToolRequests) => {
+    let JSONdata = JSON.stringify(SoftwareToolRequests);
+    res.send(JSONdata);
+  }).catch(err => {
+    res.send("Unable to connect to database")
+  })
 })
 
 module.exports = router;
