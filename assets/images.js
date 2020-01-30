@@ -12,6 +12,7 @@ var colors = [
 
 var images = [
     {category:'Map',imgList:['/img/map1.jpeg','/img/map2.jpeg','/img/map3.jpeg','/img/map4.jpeg']},
+    {category:'Back-end',imgList:['/img/backend1.jpg','/img/backend2.jpg','/img/backend3.jpg','/img/backend4.jpg']},
     {category:'Calendar',imgList:['/img/calendar1.jpeg','/img/calendar2.jpeg','/img/calendar3.jpeg','/img/calendar4.jpeg']},
     {category:'Data',imgList:['/img/data1.jpeg','/img/data2.jpeg','/img/data3.jpeg','/img/data4.jpeg']},
     {category:'Finance',imgList:['/img/finance1.jpeg','/img/finance2.jpeg','/img/finance3.jpeg','/img/finance4.jpeg']},
